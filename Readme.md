@@ -40,3 +40,9 @@ Sebuah aplikasi yang dapat digunakan untuk pemesanan minuman dan makanan pada ca
  - pesanan
  # dapur (4)
  - pesanan
+
+TAMBAHKAN FILE .htaccess
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9]+)$ index.php?x=$1 [L,QSA]
